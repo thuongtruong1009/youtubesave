@@ -1,7 +1,7 @@
 import { FastifyInstance } from "fastify";
 import path from "node:path";
 import fastifyStatic from "@fastify/static";
-import { loggerPlugin } from "../middlewares/logger";
+import { loggerPlugin } from "./logger";
 import cors from "@fastify/cors";
 import rateLimit from "@fastify/rate-limit";
 
@@ -25,7 +25,7 @@ export default async function registerMiddleware(fastify: FastifyInstance) {
   });
 
   fastify.register(rateLimit, {
-    max: 2,
+    max: 100,
     timeWindow: "1 minute",
   });
 
