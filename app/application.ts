@@ -12,8 +12,8 @@ const server: FastifyInstance<Server, IncomingMessage, ServerResponse> | any =
     http2: true,
     https: {
       allowHTTP1: true,
-      key: fs.readFileSync(path.join(__dirname, "../ssl/key.pem"), "utf8"),
-      cert: fs.readFileSync(path.join(__dirname, "../ssl/cert.pem")),
+      key: fs.readFileSync(path.join(__dirname, "../key.pem"), "utf8"),
+      cert: fs.readFileSync(path.join(__dirname, "../cert.pem")),
       passphrase: EnvConf.PASSPHRASE,
     },
     logger: loggerFormat[EnvConf.NODE_ENV] ?? true,

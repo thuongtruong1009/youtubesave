@@ -12,7 +12,9 @@
 ## Techonologies
 
 [Fastify](https://www.fastify.io/)
+
 [TypeScript](https://www.typescriptlang.org/)
+
 [TsLint](https://palantir.github.io/tslint/rules/)
 
 <!-- ### Reference

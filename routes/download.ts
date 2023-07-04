@@ -24,7 +24,7 @@ export default function (fastify: FastifyInstance) {
         filter: (format) => format.itag === itag,
       }).pipe(reply.raw);
 
-      reply.send({ message: "Hello World" });
+      // reply.send({ message: "Hello World" });
     }
   );
 }
