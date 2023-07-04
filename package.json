@@ -7,9 +7,8 @@
     "sass": "sass --watch public/style.scss:public/style.css",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "dev": "nodemon ./index.ts && npm run sass",
-    "copy-files": "copyfiles ./public/*.html ./public/*.css ./*.pem dist/",
+    "copy-files": "copyfiles ./public/*.html ./public/*.css ./*.crt ./*.key ./*.csr dist/",
     "build": "tsc -p tsconfig.json && npm run copy-files",
-    "preview": "tsc && node ./dist/index.js",
     "start": "node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
